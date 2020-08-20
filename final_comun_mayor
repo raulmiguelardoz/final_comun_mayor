@@ -1,0 +1,27 @@
+def final_comun_mayor(str_1,str_2):
+    comun_mayor=""
+    longitud_minima=min([len(str_1),len(str_2)])
+    str_1=list(str_1)
+    str_1.reverse()
+    str_2=list(str_2)
+    str_2.reverse()    
+    i=0
+    while i<longitud_minima:
+        if str_1[i]==str_2[i]:
+            comun_mayor+=str_1[i]
+        if str_1[i]!=str_2[i]:
+            break
+        i+=1
+    comun_mayor=list(comun_mayor)
+    comun_mayor.reverse()
+    comun_mayor="".join(comun_mayor)
+    print(comun_mayor)
+
+
+final_comun_mayor('camión', 'ración')
+print("-----------------------------------")
+final_comun_mayor('Python', 'PyCon')
+print("-----------------------------------")
+final_comun_mayor('Teclado', 'Mezclado')
+print("-----------------------------------")
+final_comun_mayor('Harina', 'Arroz')
